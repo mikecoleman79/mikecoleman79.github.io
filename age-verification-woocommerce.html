@@ -1,39 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Case Study – Age Verification Integration (WooCommerce)</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="WooCommerce age verification integration using OneID API for age-restricted products.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WooCommerce Age Verification Integration – Michael Coleman</title>
+
   <style>
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background: #f7f7f7;
-      color: #222;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem;
-      background: #fff;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+      max-width: 780px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+      color: #111;
     }
 
     h1, h2, h3 {
-      line-height: 1.3;
+      line-height: 1.25;
+      margin-top: 2.5rem;
     }
 
     h1 {
-      margin-bottom: 0.5rem;
-    }
-
-    h2 {
-      margin-top: 3rem;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 0.5rem;
+      margin-top: 0;
     }
 
     p {
@@ -41,42 +29,42 @@
     }
 
     ul {
-      margin: 1rem 0 1.5rem 1.5rem;
+      margin: 1rem 0 1rem 1.25rem;
     }
 
     li {
       margin-bottom: 0.5rem;
     }
 
+    a {
+      color: #0366d6;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .meta {
+      color: #555;
+      margin: 1.5rem 0 2.5rem;
+    }
+
+    .section {
+      margin-bottom: 2.5rem;
+    }
+
     .back {
       margin-bottom: 2rem;
     }
 
-    .meta {
-      color: #666;
-      font-size: 0.9rem;
-      margin-bottom: 2rem;
-    }
-
-    .highlight {
-      background: #f1f5ff;
-      border-left: 4px solid #4c6ef5;
-      padding: 1rem;
-      margin: 2rem 0;
-    }
-
-    .stack {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 1rem;
-    }
-
     .tag {
-      background: #eee;
-      padding: 0.3rem 0.7rem;
+      display: inline-block;
+      background: #f2f2f2;
+      padding: 0.25rem 0.5rem;
       border-radius: 4px;
       font-size: 0.85rem;
+      margin-right: 0.5rem;
     }
   </style>
 </head>
@@ -86,136 +74,125 @@
     <a href="/">← Back to home</a>
   </p>
 
-  <main class="container">
-    <header>
-      <h1>Age Verification Integration for WooCommerce</h1>
-      <p class="meta">
-        Client: Popcorn Web Design · Platform: WordPress & WooCommerce
-      </p>
-    </header>
+  <h1>Age Verification Integration for Restricted WooCommerce Products</h1>
 
-    <section>
-      <h2>Project Overview</h2>
-      <p>
-        This project involved implementing a compliant age verification flow
-        for selected age-restricted products on an existing WooCommerce site.
-        The solution required integration with a third-party age verification
-        service (OneID) while ensuring minimal impact on the standard checkout
-        experience.
-      </p>
+  <div class="meta">
+    <p>
+      <strong>Role:</strong> Senior WordPress Developer<br>
+      <strong>Agency:</strong> Popcorn Web Design<br>
+      <strong>Client:</strong> E-commerce / Retail (NDA)
+    </p>
+    <p>
+      <span class="tag">WordPress</span>
+      <span class="tag">WooCommerce</span>
+      <span class="tag">PHP</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">OneID API</span>
+      <span class="tag">OAuth</span>
+    </p>
+  </div>
 
-      <p>
-        The site already had an established customer base, meaning the solution
-        needed to be robust, legally compliant, and carefully integrated into
-        existing cart and checkout logic.
-      </p>
-    </section>
+  <div class="section">
+    <h2>Overview</h2>
+    <p>
+      I delivered a compliant age verification solution for an existing WooCommerce
+      site selling a mix of standard and age-restricted products.
+    </p>
+    <p>
+      The solution required integrating a third-party age verification provider
+      (<strong>OneID</strong>) while maintaining a low-friction checkout experience
+      for non-restricted purchases.
+    </p>
+  </div>
 
-    <section>
-      <h2>The Challenge</h2>
-      <ul>
-        <li>WooCommerce does not provide native age verification functionality</li>
-        <li>Only specific products required verification</li>
-        <li>Legal and compliance risks if verification failed</li>
-        <li>No sensitive user data could be stored locally</li>
-        <li>Checkout flow needed to remain smooth for non-restricted products</li>
-      </ul>
-    </section>
+  <div class="section">
+    <h2>The Problem</h2>
+    <p>
+      The client needed to enforce age checks for specific products to meet legal
+      and regulatory requirements, without introducing unnecessary confirmation
+      steps across the entire store.
+    </p>
+    <p>
+      Key challenges included:
+    </p>
+    <ul>
+      <li>No native age verification support in WooCommerce</li>
+      <li>Only certain products requiring verification</li>
+      <li>Zero tolerance for storing sensitive personal data</li>
+      <li>Existing checkout flow needed to remain intact</li>
+    </ul>
+  </div>
 
-    <section>
-      <h2>Technical Solution</h2>
+  <div class="section">
+    <h2>Constraints</h2>
+    <ul>
+      <li>Third-party verification service outside direct control</li>
+      <li>API availability and error handling considerations</li>
+      <li>Requirement to support sandbox and production environments</li>
+      <li>Site remained live throughout development</li>
+    </ul>
+  </div>
 
-      <h3>1. Setup & Authentication</h3>
-      <p>
-        OneID API credentials were configured and OAuth authentication implemented.
-        Initial API connectivity was verified using Postman and cURL before
-        development began.
-      </p>
+  <div class="section">
+    <h2>Solution</h2>
 
-      <h3>2. API Integration</h3>
-      <p>
-        A dedicated API handler was created to manage verification requests and
-        responses. Verification states were normalised to ensure consistent
-        handling across the application.
-      </p>
+    <h3>API Setup & Authentication</h3>
+    <ul>
+      <li>Registered and configured OneID API credentials</li>
+      <li>Implemented OAuth token handling for secure requests</li>
+      <li>Verified API connectivity using Postman and cURL</li>
+    </ul>
 
-      <ul>
-        <li>Secure token handling</li>
-        <li>Graceful handling of API errors and timeouts</li>
-        <li>Clear verified / not-verified states</li>
-      </ul>
+    <h3>Verification Request Handling</h3>
+    <ul>
+      <li>Custom API handler for verification requests</li>
+      <li>Normalised verified / not-verified states</li>
+      <li>Graceful handling of failed or incomplete verifications</li>
+    </ul>
 
-      <h3>3. WooCommerce Cart & Checkout Logic</h3>
+    <h3>WooCommerce Cart & Checkout Logic</h3>
+    <ul>
+      <li>Introduced a custom product meta flag for age-restricted items</li>
+      <li>Scanned cart contents to detect restricted products</li>
+      <li>Stored verification state securely in the session</li>
+      <li>Blocked checkout using <code>woocommerce_checkout_process</code></li>
+    </ul>
 
-      <p>
-        A custom product meta field (<code>is_age_restricted</code>) was introduced
-        to flag products requiring verification.
-      </p>
+    <h3>User Experience Considerations</h3>
+    <ul>
+      <li>Clear messaging when verification is required</li>
+      <li>Modal or redirect-based verification flow</li>
+      <li>No disruption to standard product purchases</li>
+    </ul>
+  </div>
 
-      <ul>
-        <li>Cart scanned for restricted items</li>
-        <li>Verification status stored in session</li>
-        <li>Checkout blocked if verification not completed</li>
-        <li>Orders prevented via <code>woocommerce_checkout_process</code></li>
-      </ul>
+  <div class="section">
+    <h2>Testing & Deployment</h2>
+    <ul>
+      <li>Tested mixed carts with restricted and unrestricted products</li>
+      <li>Handled API downtime and timeout scenarios</li>
+      <li>Optimised session handling across page reloads</li>
+      <li>Deployed from sandbox to production with logging enabled</li>
+    </ul>
+  </div>
 
-      <h3>4. UI / UX Considerations</h3>
-      <p>
-        Clear messaging was added to inform users when age verification was required.
-        This was implemented using a modal or redirect flow to avoid disrupting
-        the checkout experience unnecessarily.
-      </p>
+  <div class="section">
+    <h2>Outcome</h2>
+    <ul>
+      <li>Legally compliant age verification flow</li>
+      <li>No negative impact on standard checkout journeys</li>
+      <li>Secure, stateless handling of verification data</li>
+      <li>Maintainable, plugin-based architecture</li>
+    </ul>
+  </div>
 
-      <h3>5. Testing & Edge Cases</h3>
-      <ul>
-        <li>Mixed carts (restricted + unrestricted products)</li>
-        <li>Failed or abandoned verification attempts</li>
-        <li>API downtime and fallback behaviour</li>
-        <li>Session persistence across page reloads</li>
-      </ul>
-
-      <h3>6. Deployment</h3>
-      <p>
-        The integration was migrated from sandbox to production with additional
-        logging enabled to monitor live usage and identify any potential issues
-        early.
-      </p>
-    </section>
-
-    <section>
-      <h2>Outcome</h2>
-      <div class="highlight">
-        <ul>
-          <li>Legally compliant age-restricted checkout flow</li>
-          <li>No impact on standard product purchases</li>
-          <li>Secure, stateless verification handling</li>
-          <li>Maintainable, plugin-based architecture</li>
-        </ul>
-      </div>
-    </section>
-
-    <section>
-      <h2>Technology Stack</h2>
-      <div class="stack">
-        <span class="tag">WordPress</span>
-        <span class="tag">WooCommerce</span>
-        <span class="tag">PHP</span>
-        <span class="tag">JavaScript</span>
-        <span class="tag">OneID API</span>
-        <span class="tag">OAuth</span>
-      </div>
-    </section>
-
-    <section>
-      <h2>Key Takeaways</h2>
-      <p>
-        This project highlights a senior-level approach to integrating
-        third-party services into WooCommerce, balancing compliance,
-        performance, user experience, and long-term maintainability.
-      </p>
-    </section>
-
-  </main>
+  <div class="section">
+    <h2>Notes</h2>
+    <p>
+      Due to NDA restrictions, code samples and deeper technical details
+      are available to discuss on request.
+    </p>
+  </div>
 
 </body>
 </html>
