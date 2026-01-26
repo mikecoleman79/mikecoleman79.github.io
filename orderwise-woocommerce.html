@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>B2B WooCommerce & Orderwise Integration – Michael Coleman</title>
+
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+      max-width: 780px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+      color: #111;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.25;
+      margin-top: 2.5rem;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    p {
+      margin: 1rem 0;
+    }
+
+    ul {
+      margin: 1rem 0 1rem 1.25rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      color: #0366d6;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .meta {
+      color: #555;
+      margin: 1.5rem 0 2.5rem;
+    }
+
+    .section {
+      margin-bottom: 2.5rem;
+    }
+
+    .back {
+      margin-bottom: 2rem;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #f2f2f2;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      margin-right: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <p class="back">
+    <a href="/">← Back to home</a>
+  </p>
+
+  <h1>B2B WooCommerce Platform with Orderwise CRM Integration</h1>
+
+  <div class="meta">
+    <p>
+      <strong>Role:</strong> Senior / Lead WordPress Developer<br>
+      <strong>Agency:</strong> Popcorn Web Design<br>
+      <strong>Client:</strong> Healthcare / B2B e-commerce (NDA)
+    </p>
+    <p>
+      <span class="tag">WordPress</span>
+      <span class="tag">WooCommerce</span>
+      <span class="tag">ACF</span>
+      <span class="tag">PHP</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">Orderwise CRM</span>
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Overview</h2>
+    <p>
+      I led the technical delivery of a highly bespoke WooCommerce platform for a healthcare
+      B2B client requiring complex pricing, ordering and compliance workflows.
+    </p>
+    <p>
+      The project centred around a deep integration with <strong>Orderwise CRM</strong>,
+      supporting customer-specific price lists, stock visibility, multi-store accounts
+      and strict ordering rules — functionality well beyond standard WooCommerce capabilities.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>The Problem</h2>
+    <p>
+      The client needed to replace manual and fragmented ordering processes with a single,
+      self-serve e-commerce platform that accurately reflected their existing Orderwise data.
+    </p>
+    <p>
+      Core challenges included:
+    </p>
+    <ul>
+      <li>Customer-specific pricing and product availability</li>
+      <li>Multiple stores and user profiles per account</li>
+      <li>Regulatory requirements for controlled products</li>
+      <li>Large product catalogue with live stock indicators</li>
+    </ul>
+    <p>
+      Off-the-shelf WooCommerce plugins could not support this level of custom logic without
+      compromising performance or stability.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Constraints</h2>
+    <ul>
+      <li>Orderwise acted as the single source of truth for customers, pricing and stock</li>
+      <li>Complex customer group logic (e.g. pharmacies vs GPs)</li>
+      <li>Third-party systems outside our direct control</li>
+      <li>Platform required ongoing use during development</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Solution</h2>
+
+    <h3>Orderwise Integration & Data Handling</h3>
+    <ul>
+      <li>Custom database configuration to store raw Orderwise data</li>
+      <li>Import scripts to synchronise pricing, stock and customer records</li>
+      <li>Scheduled update logic for store details and price lists</li>
+      <li>Custom order export logic to return structured data back to Orderwise</li>
+    </ul>
+
+    <h3>Customer Groups & Pricing Logic</h3>
+    <ul>
+      <li>Dynamic customer-specific price lists mapped from Orderwise</li>
+      <li>Minimum spend thresholds and maximum order quantities</li>
+      <li>Restricted product visibility per customer group</li>
+      <li>Different site experiences depending on customer type</li>
+    </ul>
+
+    <h3>Custom Order & Basket Workflows</h3>
+    <ul>
+      <li>Profile switcher enabling multiple baskets per customer account</li>
+      <li>Daily order limits with paused / pending order states</li>
+      <li>Automated abandoned basket notifications for customers and admins</li>
+      <li>Buying lists and purchasing restrictions per group</li>
+    </ul>
+
+    <h3>Search, Stock & UX Enhancements</h3>
+    <ul>
+      <li>AJAX-powered product search with live stock indicators</li>
+      <li>Customer-aware pricing displayed throughout search and listings</li>
+      <li>Drug tariff (RRP) pricing shown alongside customer pricing</li>
+      <li>Slide-out basket, offer notifications and promotional popups</li>
+    </ul>
+
+    <h3>Account & Compliance Features</h3>
+    <ul>
+      <li>Controlled drug requisition forms within the customer portal</li>
+      <li>Back-in-stock email notifications</li>
+      <li>CQF onboarding process with custom registration logic</li>
+      <li>Live chat integration for customer support</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Outcome</h2>
+    <ul>
+      <li>Stable, scalable B2B e-commerce platform tightly integrated with Orderwise</li>
+      <li>Reduced manual administration and order processing overhead</li>
+      <li>Clear separation between data, business logic and presentation</li>
+      <li>Platform capable of evolving alongside complex business requirements</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Notes</h2>
+    <p>
+      Due to NDA restrictions, a live link and deeper technical walkthrough
+      are available to discuss on request.
+    </p>
+  </div>
+
+</body>
+</html>
