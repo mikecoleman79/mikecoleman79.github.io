@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Member Reporting Platform & Data Management – Michael Coleman</title>
+
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+      max-width: 780px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+      color: #111;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.25;
+      margin-top: 2.5rem;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    p {
+      margin: 1rem 0;
+    }
+
+    ul {
+      margin: 1rem 0 1rem 1.25rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      color: #0366d6;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .meta {
+      color: #555;
+      margin: 1.5rem 0 2.5rem;
+    }
+
+    .section {
+      margin-bottom: 2.5rem;
+    }
+
+    .back {
+      margin-bottom: 2rem;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #f2f2f2;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      margin-right: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <p class="back">
+    <a href="/">← Back to home</a>
+  </p>
+
+  <h1>Member Reporting Platform with Advanced Forms & Data Management</h1>
+
+  <div class="meta">
+    <p>
+      <strong>Role:</strong> Senior WordPress Developer<br>
+      <strong>Agency:</strong> Popcorn Web Design<br>
+      <strong>Client:</strong> Financial services / member organisation (confidential)
+    </p>
+    <p>
+      <span class="tag">WordPress</span>
+      <span class="tag">Gravity Forms</span>
+      <span class="tag">PHP</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">Custom Post Types</span>
+      <span class="tag">DataTables</span>
+      <span class="tag">Access Control</span>
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Overview</h2>
+    <p>
+      I led the redevelopment of a member reporting platform for a financial services
+      organisation, replacing a manual Excel-based reporting process with a secure,
+      web-based system built on WordPress.
+    </p>
+    <p>
+      The platform allows member organisations (banks) to submit annual and bi-annual
+      financial reports through a private members area, with structured data capture,
+      validation, persistence and reporting tools for administrators.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>The Problem</h2>
+    <p>
+      The client’s existing workflow relied on large, complex Excel spreadsheets to collect
+      financial data from members. These were manually completed, emailed back and processed
+      offline.
+    </p>
+    <p>
+      Key issues included:
+    </p>
+    <ul>
+      <li>High risk of data entry errors and inconsistent formatting</li>
+      <li>No ability to partially complete and return to submissions</li>
+      <li>Manual validation and checking of financial data</li>
+      <li>Static tables on the website with no live reporting</li>
+      <li>No secure, member-specific access to historical submissions</li>
+    </ul>
+    <p>
+      The client needed a scalable, repeatable reporting system that could replace Excel
+      entirely while remaining easy for non-technical users to complete.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Constraints</h2>
+    <ul>
+      <li>Complex financial models had to be accurately replicated online</li>
+      <li>Reports needed to support both annual and bi-annual submissions</li>
+      <li>Members could only access and view their own data</li>
+      <li>The system had to support drafts, saved progress and resuming later</li>
+      <li>Submitted data needed to be reusable for reporting and export</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Solution</h2>
+
+    <h3>Private Members Area & Access Control</h3>
+    <ul>
+      <li>Creation of a dedicated members-only user role</li>
+      <li>Page-level and data-level access restrictions</li>
+      <li>Users mapped to specific member organisations</li>
+      <li>Members restricted to viewing and editing their own reports only</li>
+    </ul>
+
+    <h3>Advanced Multi-Step Reporting Form</h3>
+    <ul>
+      <li>Multi-step Gravity Form designed to mirror the existing Excel spreadsheet</li>
+      <li>Save and continue functionality allowing users to return later</li>
+      <li>Custom field validation for financial inputs</li>
+      <li>Summary and review step prior to final submission</li>
+      <li>Automated email notifications on save and submission</li>
+    </ul>
+
+    <h3>Data Storage & Modelling</h3>
+    <ul>
+      <li>Custom post type for members</li>
+      <li>Custom post type for member reports</li>
+      <li>Each form submission stored as structured, queryable data</li>
+      <li>Clear relationship between users, members and reports</li>
+    </ul>
+
+    <h3>Reporting, Tables & Exports</h3>
+    <ul>
+      <li>Admin-facing reporting tables powered by DataTables.js</li>
+      <li>Filtering, sorting and searching across submissions</li>
+      <li>Export of member reports to CSV for analysis</li>
+      <li>Export of individual member reports to PDF for records and compliance</li>
+    </ul>
+
+    <h3>Admin & Operational Tooling</h3>
+    <ul>
+      <li>Backend views for saved (draft) and submitted reports</li>
+      <li>Manual entry tools for testing and data verification</li>
+      <li>Clear separation between submission, review and reporting workflows</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Outcome</h2>
+    <ul>
+      <li>Fully replaced Excel-based reporting with a secure web platform</li>
+      <li>Improved data accuracy through validation and structured inputs</li>
+      <li>Reduced manual administration and follow-up with members</li>
+      <li>Created a scalable reporting system for future reporting cycles</li>
+      <li>Enabled members to manage and review their submissions independently</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Notes</h2>
+    <p>
+      Due to confidentiality, screenshots and live access are not publicly available.
+      The architecture, data modelling and workflow design can be discussed in more
+      detail on request.
+    </p>
+  </div>
+
+</body>
+</html>
