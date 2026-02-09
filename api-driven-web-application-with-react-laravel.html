@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>API-Driven Web Application with React & Laravel - Michael Coleman</title>
+
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+      max-width: 780px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+      color: #111;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.25;
+      margin-top: 2.5rem;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    p {
+      margin: 1rem 0;
+    }
+
+    ul {
+      margin: 1rem 0 1rem 1.25rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      color: #0366d6;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .meta {
+      color: #555;
+      margin: 1.5rem 0 2.5rem;
+    }
+
+    .section {
+      margin-bottom: 2.5rem;
+    }
+
+    .back {
+      margin-bottom: 2rem;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #f2f2f2;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      margin-right: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <p class="back">
+    <a href="/">← Back to home</a>
+  </p>
+
+  <h1>API-Driven Web Application with React & Laravel</h1>
+
+  <div class="meta">
+    <p>
+      <strong>Role:</strong> Design & Development (Personal Project)<br>
+      <strong>Project:</strong> MyIgloo (personal / exploratory build)
+    </p>
+    <p>
+      <span class="tag">React</span>
+      <span class="tag">Laravel</span>
+      <span class="tag">REST API</span>
+      <span class="tag">Decoupled Architecture</span>
+      <span class="tag">Authentication</span>
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Overview</h2>
+    <p>
+      I designed and built a small, API-driven web application to explore a fully
+      decoupled frontend and backend architecture using a React frontend and a
+      Laravel-based REST API.
+    </p>
+    <p>
+      The project was created as a practical learning exercise to deepen my
+      understanding of modern JavaScript application structure, API design, and
+      frontend-backend separation, while applying production-minded patterns around
+      validation, data flow and maintainability.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Architecture</h2>
+    <p>
+      The application is split into two distinct layers:
+    </p>
+    <ul>
+      <li>A React frontend responsible for rendering UI, managing state and handling user interaction</li>
+      <li>A Laravel API handling authentication, validation, business logic and data persistence</li>
+    </ul>
+    <p>
+      Communication between the two layers is handled via JSON-based REST endpoints,
+      allowing each side to evolve independently.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Key Challenges</h2>
+    <ul>
+      <li>Designing clear API contracts between frontend and backend</li>
+      <li>Managing asynchronous data loading and UI state in React</li>
+      <li>Handling validation and error responses consistently across the stack</li>
+      <li>Ensuring authentication and protected routes behaved predictably</li>
+      <li>Keeping the project intentionally small while still realistic</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Approach & Decisions</h2>
+
+    <h3>API Design & Validation</h3>
+    <ul>
+      <li>Defined clear request and response structures for all endpoints</li>
+      <li>Handled validation and business rules within the Laravel API</li>
+      <li>Returned structured error responses for predictable frontend handling</li>
+    </ul>
+
+    <h3>Frontend Structure</h3>
+    <ul>
+      <li>Organised React components around features rather than pages</li>
+      <li>Kept state local where possible to avoid unnecessary complexity</li>
+      <li>Handled loading, error and empty states explicitly</li>
+    </ul>
+
+    <h3>Authentication & Protected Areas</h3>
+    <ul>
+      <li>Implemented authenticated API requests</li>
+      <li>Restricted access to protected frontend routes</li>
+      <li>Ensured graceful handling of expired or invalid sessions</li>
+    </ul>
+
+    <h3>Maintainability</h3>
+    <ul>
+      <li>Kept frontend and backend concerns clearly separated</li>
+      <li>Focused on readable, well-structured code over premature optimisation</li>
+      <li>Documented assumptions and decisions within the codebase</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Outcome</h2>
+    <ul>
+      <li>A clean, decoupled React and Laravel application with clear data flow</li>
+      <li>Improved confidence working with API-driven frontend architectures</li>
+      <li>Practical experience managing frontend state and backend validation together</li>
+      <li>A reusable reference project for future decoupled builds</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Notes</h2>
+    <p>
+      This project was intentionally scoped as a small personal build to focus on
+      architecture and fundamentals rather than scale. It complements my commercial
+      platform experience by demonstrating comfort working beyond CMS-driven systems.
+    </p>
+  </div>
+
+</body>
+</html>
